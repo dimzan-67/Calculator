@@ -1,0 +1,53 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Calculator App",
+  "main": "electron.js",
+  "author": "DimZan",
+  "license": "ISC",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.dimzan.calculator",
+    "productName": "Calculator",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.css",
+      "main.js",
+      "electron.js",
+      "package.json"
+    ],
+    "linux": {
+      "category": "Utility",
+      "icon": "assets/icon.png",
+      "target": [
+        "AppImage",
+        "snap"
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.png",
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "assets/icon.png",
+      "target": [
+        "dmg"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^38.4.0",
+    "electron-builder": "^26.0.12"
+  }
+}
+
